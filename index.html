@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Ёлочка</title>
+</head>
+<body>
+    <script>
+        const numb = +prompt('Введите число от 1 до 5:');
+        let result = '';
+        const allColumn = numb * 2 - 1;
+
+        for (let a = 1, b = numb - 1; b >= 0; a++, b--) {
+  
+        for (let col = 1; col <= allColumn; col++) {
+   
+        if (col <= b || col > (a * 2 - 1) + b) {
+            result += '_';
+            } else {
+            result += 'x';
+                }
+            }
+        if (b > 0) {
+        result += '\n';
+            }
+        }
+        alert(result)
+    </script>
+</body>
+</html>
